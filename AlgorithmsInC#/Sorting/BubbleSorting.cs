@@ -15,12 +15,11 @@ namespace AlgorithmsInC_.Sorting
 
         public static int[] SortTheArray(int[] arValue)
         {
-            arValue = GenerateRandomArray(arValue.Length);
             int length=arValue.Length;
             
             //loop to repeat the sorting for loop until this loop ends
             //#repetition for loop
-            for (int repeatationValue = length - 1; repeatationValue > 1; repeatationValue--)
+            for (int repeatationValue = length - 1; repeatationValue > 0; repeatationValue--)
             {
                 //#sorting loop
                 for (int eleIndex = 0; eleIndex <repeatationValue; eleIndex++)
@@ -37,17 +36,5 @@ namespace AlgorithmsInC_.Sorting
 
             return arValue;
         }
-
-        static int[] GenerateRandomArray(int size)
-        {
-            Random rand = new Random();
-            int[] arr = new int[size];
-            for (int i = 0; i < size; i++)
-            {
-                arr[i] = rand.Next(size); // Generate random numbers up to 1000
-            }
-            return arr;
-        }
-
     }
 }

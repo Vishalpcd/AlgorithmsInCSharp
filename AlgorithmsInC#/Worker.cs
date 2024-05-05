@@ -15,12 +15,22 @@ namespace AlgorithmsInC_
         {
             if (!stoppingToken.IsCancellationRequested)
             {
-                int[] arr = new int[4000];
-               var sortedArray= BubbleSorting.SortTheArray(arr);
+                int[] arr = {2,6,7,9,100,1};
+                Console.WriteLine("=================Array before sorting =======================");
+                foreach (int i in arr)
+                {
+                    Console.Write(" "+i+" ");
+                }
+                Console.WriteLine();
+                var sortedArray= BubbleSorting.SortTheArray(arr);
+
+               
+                Console.WriteLine("=================Array After sorting =======================");
                 foreach (int i in sortedArray)
                 {
-                    Console.WriteLine(i);
+                    Console.Write(" " + i + " ");
                 }
+                Console.WriteLine() ;
 
             }
         }
