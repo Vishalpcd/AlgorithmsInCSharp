@@ -16,21 +16,16 @@ namespace AlgorithmsInC_
             if (!stoppingToken.IsCancellationRequested)
             {
                 int[] arr = {2,6,7,9,100,1};
-                Console.WriteLine("=================Array before sorting =======================");
-                foreach (int i in arr)
-                {
-                    Console.Write(" "+i+" ");
-                }
-                Console.WriteLine();
+                Console.WriteLine("====================Bubble Sort==============");
+                Helper.PrintBefore(arr);
                 var sortedArray= BubbleSorting.SortTheArray(arr);
+                Helper.PrintAfter(sortedArray);
 
-               
-                Console.WriteLine("=================Array After sorting =======================");
-                foreach (int i in sortedArray)
-                {
-                    Console.Write(" " + i + " ");
-                }
-                Console.WriteLine() ;
+                int[] arr1 = { 2, 6, 7, 9, 100, 1 };
+                Console.WriteLine("====================Insertion Sort==============");
+                Helper.PrintBefore(arr1);
+                var insertionSortedArray = InsertionSort.SortTheArray(arr1);
+                Helper.PrintAfter(insertionSortedArray);
 
             }
         }
